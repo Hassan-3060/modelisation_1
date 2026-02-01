@@ -34,16 +34,23 @@ tempsACalculer = np.arange(dt,tempsMax,dt) # de 1s à 59s
 print(f"Les calculs seront effectuer dans interval de temps suivant : {tempsACalculer[0]} s à {tempsACalculer[-1]} s")
 
 # Calcul de positions
-for temp in tempsACalculer:
+compteur = 0
+zi = 0
+#for temp in tempsACalculer:
+while compteur < len(tempsACalculer) and zi >= 0:
+    temp = tempsACalculer[compteur]
     xi = v0x * temp
     zi = -0.5*g*temp**2 + v0z*temp
 
-    if zi < 0:
-        break
+    #while zi < 0:
+    #    break
 
     positions = np.append(positions, [
         [round(xi, 2)], [round(zi, 2)]
     ], axis=1)
+
+    compteur += 1
+
 print(positions)
 
 # Afficher la position à l'impact
