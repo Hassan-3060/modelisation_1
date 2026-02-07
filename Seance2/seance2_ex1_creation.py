@@ -1,9 +1,5 @@
 # Section import
-from importlib.metadata import requires
-from tkinter.filedialog import Open
-
 import numpy as np
-from numpy.ma.core import append
 
 #2.1.2
 ## Exercice 1.2
