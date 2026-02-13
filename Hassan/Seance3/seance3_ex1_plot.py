@@ -16,6 +16,7 @@ if not execute:
     plt.figure()
     plt.plot(x,y, color='red')
     plt.plot(x,z, color='blue')
+    plt.legend(['y = x²', 'z =  $\\sqrt{y}$'])
     plt.show()
 
 ## Deux courbes
@@ -27,6 +28,7 @@ if not execute:
     plt.ylabel('y')
     plt.legend(['Courbe de x', 'Courbe de y'])
     plt.show()
+
     plt.figure()
     plt.plot(x, z, color='blue')
     plt.title('Courbe de x et z')
