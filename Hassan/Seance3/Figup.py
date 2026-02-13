@@ -18,7 +18,10 @@ class Figup :
         self.__title = title
         self.__legend = legend
         self.__courbeSupplementaire = []
-        self.__labels = labels
+        if labels is not None :
+            self.__labels = labels
+        else:
+            self.__labels = []
         self.__estAppeler = False
 
     def getAbscisse(self) :
@@ -56,13 +59,15 @@ class Figup :
             plt.plot(courbe['reference'],courbe['altitude'], color=courbe['color'])
 
         plt.title(self.getTitle())
+
         legends = [self.getLegend()]
         for courbe in self.__courbeSupplementaire :
             legends.append(courbe['legend'])
+        plt.legend(legends)
 
         if len(self.__labels) > 0 and not self.__estAppeler :
             plt.xlabel(self.__labels[0])
-            plt.ylabel(self.__labels[-1])
-        plt.legend(legends)
+            plt.ylabel(self.__labels[1])
+
         plt.show()
         return self
