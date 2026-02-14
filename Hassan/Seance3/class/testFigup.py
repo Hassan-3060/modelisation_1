@@ -1,4 +1,3 @@
-from matplotlib import pyplot as plt
 from Figup import *
 import numpy as np
 
