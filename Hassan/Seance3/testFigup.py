@@ -15,4 +15,7 @@ fig2 = Figup(x, y, colors[0], 'Courbe de Figup 2', 'y = x²', 'x, y')
 #fig2.ajouterCourbe(y, z, colors[1], 'z =  $\\sqrt{y}$').courbe()
 
 fig3 = Figup(w, z, colors[0], None, 'w = $z^3$', 'w, z')
-fig3.courbe()
+#fig3.courbe()
+
+fig4 = Figup(w, z, colors[0], legend='w = $z^3$', title = 'courbe w et z')
+fig4.courbe()
